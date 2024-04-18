@@ -1,7 +1,5 @@
 package miu.edu.lab6.dentistapp.service.impl;
 
-import lombok.NoArgsConstructor;
-import miu.edu.lab6.dentistapp.model.Appointment;
 import miu.edu.lab6.dentistapp.model.Dentist;
 import miu.edu.lab6.dentistapp.repository.DentistRepository;
 import miu.edu.lab6.dentistapp.service.DentistService;
@@ -15,7 +13,7 @@ public class DentistServiceImpl implements DentistService {
 
     private DentistRepository dentistRepository;
 
-    private DentistServiceImpl(DentistRepository dentistRepository){
+    public DentistServiceImpl(DentistRepository dentistRepository){
         this.dentistRepository = dentistRepository;
     }
 
@@ -57,6 +55,9 @@ public class DentistServiceImpl implements DentistService {
 
             dentist.setAppointments(newDentist.getAppointments());
             dentist.setEmail(newDentist.getEmail());
+            dentist.setFirstName(newDentist.getFirstName());
+            dentist.setLastName(newDentist.getLastName());
+            dentist.setPhoneNumber(newDentist.getPhoneNumber());
 
             dentistRepository.save(dentist);
         }

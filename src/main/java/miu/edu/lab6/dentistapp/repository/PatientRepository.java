@@ -1,8 +1,9 @@
 package miu.edu.lab6.dentistapp.repository;
 
-import miu.edu.lab6.dentistapp.model.Dentist;
+import miu.edu.lab6.dentistapp.model.Patient;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
 
-public interface DentistRepository extends ListCrudRepository<Dentist, Integer> {
+@Repository
+public interface PatientRepository extends ListCrudRepository <Patient, Integer>{
 }
